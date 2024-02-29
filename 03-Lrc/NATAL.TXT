@@ -1,0 +1,5 @@
+@echo off
+set path=c:\windows\system32;c:\natal\clipper5\bin;c:\natal\blinker\bin;C:\NATAL
+set lib=c:\natal\clipper5\lib;c:\natal\blinker\lib;c:\natal\fw\lib
+set include=c:\natal\clipper5\include;c:\natal\fw\include
+set dll=c:\natal\fw\dll
