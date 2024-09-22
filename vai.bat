@@ -11,7 +11,8 @@ setlocal enabledelayedexpansion
 
 rem Conta o número total de arquivos .zip
 set total=0
-for %%F in (*.zip) do (
+
+for %%F in (05*.zip) do (
     set /a total+=1
 )
 
@@ -21,9 +22,11 @@ set count=0
 echo Adicionando arquivos .zip ao repositório...
 
 rem Itera sobre cada arquivo .zip
-for %%F in (*.zip) do (
+for %%F in (05*.zip) do (
     set /a count+=1
+	echo ----------------------------------------
     echo Adicionando %%F !count! de !total!...
+	echo ----------------------------------------
     git add "%%F"
     
     echo Comitando %%F...
@@ -32,7 +35,10 @@ for %%F in (*.zip) do (
     echo Empurrando %%F para a nuvem...
     git push
     
+	echo -------------------------------------------------------
     echo %%F enviado com sucesso! Progresso: !count! de !total!
+	echo -------------------------------------------------------
+	cls
 )
 
 echo Todos os arquivos .zip foram enviados para o GitHub!
